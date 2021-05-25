@@ -24,7 +24,7 @@ newType <- sensor[sensor$`Adhesive Type` == "Low Viscosity" &
                  sensor$`Filling Method` == "Pin" &
                 sensor$`Working Resistance` == "< 2",]
 
-flatPass <- subset(flat, flat$`Calibration Day 0` == "Pass")
+flatPass <- subset(newType, newType$`Calibration Day 0` == "Pass")
 
 sumData[1] <- nrow(flat)
 sumPass[1] <- nrow(flatPass)
